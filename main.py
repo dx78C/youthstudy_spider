@@ -26,6 +26,7 @@ def get_first_url(url):  # 得到第一个url，即每一篇文章的url，结�
     return first_url
 
 
+# 获取下载链接
 def get_second_url(url):  # 得到第二个url，即文章中每个图片的url，结果是未遍历的
     res_2 = requests.get(url=url, headers=headers)
     html_2 = res_2.text
@@ -41,15 +42,18 @@ def get_second_url(url):  # 得到第二个url，即文章中每个图片的url�
     return picture_list, title[start:end + 1]
 
 
-def download_picture(url, dir, num1, i):  # 下载图片
+# 下载图片
+def download_picture(title, url, dir, num1, i):
     res_3 = requests.get(url=url, headers=headers)
     picture_data = res_3.content
-    picture_name = 'img{}_{}.jpg'.format(num1, i)
+    #  picture_name = 'img{}_{}.jpg'.format(num1, i)
+    picture_name = title + str(i) + '.jpg'
     picture_path = dir + picture_name
     with open(picture_path, 'wb') as f:
         f.write(picture_data)
 
 
+# 发送邮件
 # https://www.jianshu.com/p/f6ac9e997ef5
 def sendEmail(dataGroup, subject):
     # 定义相关数据,请更换自己的真实数据
@@ -70,7 +74,7 @@ def sendEmail(dataGroup, subject):
     i = 0
 
     img_path = gb.glob(dataGroup["dir"] + "*.jpg")
-    body = '"""' + '<h3>共' + str(len(img_path)) + '三张图片</h3></br>'
+    body = '"""' + '<h3>共' + str(len(img_path)) + '张图片</h3></br>'
     for path in img_path:
         imgId = 'image' + str(i)
         fp = open(path, 'rb')
@@ -133,10 +137,11 @@ if __name__ == '__main__':
         # num1 = 1
         first_url = 'https:' + fist_urls[0]
         second_url, title = get_second_url(first_url)
+        user = dataGroup["user"]
+        title = user + title
         for i in range(len(second_url)):
             picture_urls = second_url[i].get('data-src')
             picture_url = 'https:' + picture_urls
-            download_picture(picture_url, dir, 1, i)
+            download_picture(title, picture_url, dir, 1, i)
         # num1 += 1
-        user = dataGroup["user"]
-        sendEmail(dataGroup, user + title)
+        sendEmail(dataGroup, title)
