@@ -8,8 +8,7 @@
 
 ## 🎉️ 使用方法
 
-将配置信息填写在data.json中：
-
+1.将配置信息填写在data.json中：
 ```
 "user": "学号+姓名+",
 "dir": "下载目录",
@@ -19,10 +18,9 @@
 "receiver": "接收邮箱1,接收邮箱2",
 "username": ""
 ```
-
-运行main
+2.运行main
 
 ## ❤️感谢
 
-[QiYi92](https://github.com/QiYi92/Youth_Learning_Reptile)
+[QiYi92](https://github.com/QiYi92/Youth_Learning_Reptile)  
 [zhouyumin](https://github.com/zhouyumin/qndxx)
