@@ -11,7 +11,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
 import json
 from lxml import etree
-
+import shutil
 headers = {
     'user - agent': 'Mozilla / 5.0(WindowsNT10.0;Win64;x64) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 80.0.3987.116Safari / 537.36'
 }
@@ -114,7 +114,7 @@ def haveDataFile():
             return True
     return False
 
-
+#
 # https://blog.csdn.net/qq_44921056/article/details/113398597
 if __name__ == '__main__':
     if haveDataFile() == False:
@@ -126,8 +126,9 @@ if __name__ == '__main__':
         dataGroup = dataGroup[1]
         # 创建文件夹
         dir = dataGroup["dir"]
-        if not os.path.exists(dir):
-            os.mkdir(dir)
+        if os.path.exists(dir):
+            shutil.rmtree(dir)  # 将整个文件夹删除
+        os.mkdir(dir)
 
         base_url = 'https://search.bilibili.com/article?keyword='
         # insert=input()
