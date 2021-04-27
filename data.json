@@ -9,12 +9,12 @@
     "username": "登录邮箱"
   },
   {
-    "user": "2020010534+周耀华+",
-    "dir": "D://temp/",
-    "smtpserver": "smtp.qq.com",
-    "sender": "be_light@foxmail.com",
-    "password": "hypyxzsiqqtlbifc",
-    "receiver": "colflip@163.com,gxsdjxxytzb@163.com",
-    "username": "be_light@foxmail.com"
+    "user": "",
+    "dir": "",
+    "smtpserver": "",
+    "sender": "",
+    "password": "",
+    "receiver": "",
+    "username": ""
   }
 ]
