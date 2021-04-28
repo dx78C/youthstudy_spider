@@ -1,4 +1,4 @@
-# 🚀️youthStudy完成页面
+# 🚀️ youthStudy完成页面
 
 > 使用者有责任和义务对自己的行为负责。  
 > 本项目仅供学习交流使用，严禁用于其他用途! For learning and communication only, other use is strictly prohibited！
@@ -16,11 +16,11 @@
 "sender": "发送邮箱",
 "password": "授权码",
 "receiver": "接收邮箱1,接收邮箱2",
-"username": ""
+"username": "登录邮箱"
 ```
 2.运行main.py
 
-## ❤️感谢
+## ❤ 感谢
 
 [QiYi92](https://github.com/QiYi92/Youth_Learning_Reptile)  
 [zhouyumin](https://github.com/zhouyumin/qndxx)
