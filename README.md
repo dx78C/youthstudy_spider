@@ -20,9 +20,9 @@
 ```
 2.运行main.py
 ### 说明
-QQ邮箱smtp服务器配置：
+QQ邮箱smtp服务器配置：  
 ![img.png](img/img1.png)
-QQ获取邮箱授权码:
+QQ获取邮箱授权码:  
 ![img.png](img/img2.png)
 ## ❤ 感谢
 
