@@ -1,4 +1,5 @@
 
-idea
+.idea/
 data.json
 __pycache__
+.idea/inspectionProfiles/profiles_settings.xml
