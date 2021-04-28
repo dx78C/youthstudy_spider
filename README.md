@@ -21,10 +21,10 @@
 2.运行main.py
 ### 说明
 QQ邮箱smtp服务器配置：  
-![img.png](img/img1.png)
-QQ获取邮箱授权码:  
-![img.png](img/img2.png)
-## ❤ 感谢
+![img.png](img/img1.png)  
 
+QQ获取邮箱授权码:  
+![img.png](img/img2.png)  
+## ❤ 感谢  
 [QiYi92](https://github.com/QiYi92/Youth_Learning_Reptile)  
 [zhouyumin](https://github.com/zhouyumin/qndxx)
