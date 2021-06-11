@@ -21,6 +21,7 @@ DATAFILENAME = "data.json"  # 数据文件的名称
 def get_first_url(url):  # 得到第一个url，即每一篇文章的url，结果是未遍历的
     res_1 = requests.get(url=url, headers=headers)
     html_1 = res_1.text
+
     first_url = re.findall('<li.*?<a.*?"(//w.*?search)"', html_1, re.S)
     # first_url = re.findall('<li.*?<a.*?"(//www.bilibili.com/read/cv*)"', html_1, re.S)
     return first_url
@@ -33,13 +34,19 @@ def get_second_url(url):  # 得到第二个url，即文章中每个图片的url�
     soup = bs4.BeautifulSoup(html_2, 'html.parser')
     picture_list = soup.select('.img-box img')
     soup = BeautifulSoup(html_2, 'lxml')
-    title = soup.title.text
+    title='title = {}'.format(soup.find_all('title'))
+
     str1 = '第'
     str2 = '期'
-    start = title.index(str1);
-    end = title.index(str2);
-    print(title[start:end + 1])
-    return picture_list, title[start:end + 1]
+    try:
+        start = title.index(str1);
+        end = title.index(str2);
+    except:
+        print("err")
+    title=title[start:end + 1]
+    print(title)
+
+    return picture_list, title
 
 
 # 下载图片
@@ -74,7 +81,8 @@ def sendEmail(dataGroup, subject):
     i = 0
 
     img_path = gb.glob(dataGroup["dir"] + "*.jpg")
-    body = '"""' + '<h3>共' + str(len(img_path)) + '张图片</h3></br>'
+    #'"""' +
+    body ='<h1>共' + str(len(img_path)) + '张图片</h1></br>'
     for path in img_path:
         imgId = 'image' + str(i)
         fp = open(path, 'rb')
@@ -82,11 +90,10 @@ def sendEmail(dataGroup, subject):
         fp.close()
         images.add_header('Content-ID', imgId)
         msg.attach(images)
-        body = body \
-               + '<img src="cid:' + imgId + '">'
+        # body = body + '<img src="cid:' + imgId + '">'
         i += 1
-    body = body + \
-           '"""'
+    # body = body + \
+    #        '"""'
     mail_body = MIMEText(body, _subtype='html', _charset='utf-8')
     msg.attach(mail_body)
 
@@ -135,8 +142,9 @@ if __name__ == '__main__':
         insert = '青年大学习'
         base_url = base_url + insert
         fist_urls = get_first_url(base_url)
+
         # num1 = 1
-        first_url = 'https:' + fist_urls[0]
+        first_url = 'https:' + fist_urls[1]
         second_url, title = get_second_url(first_url)
         user = dataGroup["user"]
         title = user + title
