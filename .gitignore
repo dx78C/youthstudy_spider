@@ -1,7 +1,13 @@
 
 .idea/
+.gitignore/
+build/
+__pycache__/
 exe/
 exe.zip
 data.json
-data.json
 data.txt
+main.exe
+main.spec
+main.exe
+data.json

@@ -144,7 +144,7 @@ if __name__ == '__main__':
         fist_urls = get_first_url(base_url)
 
         # num1 = 1
-        first_url = 'https:' + fist_urls[1]
+        first_url = 'https:' + fist_urls[0]
         second_url, title = get_second_url(first_url)
         user = dataGroup["user"]
         title = user + title
