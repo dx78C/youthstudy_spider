@@ -29,5 +29,5 @@ QQ获取邮箱授权码:
 [QiYi92](https://github.com/QiYi92/Youth_Learning_Reptile)  
 [zhouyumin](https://github.com/zhouyumin/qndxx)
 
-# python打包exe
+## python打包exe
 pyinstaller -F main.py
