@@ -19,6 +19,7 @@ DATAFILENAME = "data.json"  # 数据文件的名称
 
 
 def get_first_url(url):  # 得到第一个url，即每一篇文章的url，结果是未遍历的
+
     res_1 = requests.get(url=url, headers=headers)
     html_1 = res_1.text
 
@@ -62,7 +63,7 @@ def download_picture(title, url, dir, num1, i):
 
 # 发送邮件
 # https://www.jianshu.com/p/f6ac9e997ef5
-def sendEmail(dataGroup, subject):
+def sendEmail(dataGroup, title):
     # 定义相关数据,请更换自己的真实数据
     smtpserver = dataGroup["smtpserver"]
     sender = dataGroup["sender"]
@@ -72,9 +73,10 @@ def sendEmail(dataGroup, subject):
 
     msg = MIMEMultipart()
 
-    msg['Subject'] = Header(subject, 'utf-8')
+    msg['Subject'] = Header(title, 'utf-8')
     msg['From'] = sender
     receivers = receiver
+    print(title,'\n',"发送方:",sender,"\n","接收方:",receivers)
     toclause = receivers.split(',')
     msg['To'] = ",".join(toclause)
     # print("send email:",msg['To'])
@@ -140,6 +142,7 @@ if __name__ == '__main__':
         base_url = 'https://search.bilibili.com/article?keyword='
         # insert=input()
         insert = '青年大学习'
+        #+'&from_source=webhistory_search'
         base_url = base_url + insert
         fist_urls = get_first_url(base_url)
 
