@@ -23,9 +23,11 @@ data.json中将下面配置信息填写在对应下方大括号内：
 
 1.下载exe程序 <https://github.com/Colflip/youthStudy/releases>
 
-2.配置data.json文件，将其放入C:\Windows\System32  
+2.配置data.json文件 
 
-3.运行exe文件  （可以设置定时计划）
+3.运行exe文件
+
+（可以设置定时计划，需要将data文件其放入C:\Windows\System32 ）
 
 
 ### 方法二：python运行
