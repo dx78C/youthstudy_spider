@@ -5,7 +5,7 @@
 > 作者不承担任何法律责任！The author assumes no legal liability！  
 
 青年大学习获取最新完成页面，并发到指定邮箱。  
-配合自动学习脚本（https://github.com/CNawalol/qndxx-action）实现全程自动工作
+配合自动学习脚本（<https://github.com/CNawalol/qndxx-action/>）实现全程自动工作
 
 ## 🎉️ 使用方法
 data.json中将下面配置信息填写在对应下方大括号内：
