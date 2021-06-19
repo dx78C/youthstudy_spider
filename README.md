@@ -5,7 +5,7 @@
 > 作者不承担任何法律责任！The author assumes no legal liability！  
 
 青年大学习获取最新完成页面，并发到指定邮箱。  
-配合自动学习脚本（<https://github.com/CNawalol/qndxx-action/>）实现全程自动工作
+配合自动学习脚本（<https://github.com/CNawalol/qndxx-action>）实现全程自动工作
 
 ## 🎉️ 使用方法
 data.json中将下面配置信息填写在对应下方大括号内：
@@ -19,18 +19,18 @@ data.json中将下面配置信息填写在对应下方大括号内：
 "username": "登录邮箱"
 ```
 
-### 方法一：👑window程序运行
+### 👑方法一：window程序运行
 
 1.下载exe程序  
 
-2.配置data。json文件，将其放入C:\Windows\System32  
+2.配置data.json文件，将其放入C:\Windows\System32  
 
 3.运行exe文件  （可以设置定时计划）
 
 
 ### 方法二：python运行
 
-1.配置data。json文件  
+1.配置data.json文件  
 
 2.运行main.py  
 
