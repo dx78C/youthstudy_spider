@@ -21,7 +21,7 @@ data.json中将下面配置信息填写在对应下方大括号内：
 
 ### 方法一：window程序运行👑
 
-1.下载exe程序  
+1.下载exe程序 <https://github.com/Colflip/youthStudy/releases>
 
 2.配置data.json文件，将其放入C:\Windows\System32  
 
