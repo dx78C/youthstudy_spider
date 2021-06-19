@@ -2,13 +2,13 @@
 
 > 使用者有责任和义务对自己的行为负责。  
 > 本项目仅供学习交流使用，严禁用于其他用途! For learning and communication only, other use is strictly prohibited！  
-> 作者不承担任何法律责任！The author assumes no legal liability！
+> 作者不承担任何法律责任！The author assumes no legal liability！  
 
-青年大学习获取最新完成页面，并发到指定邮箱。
-不能在代理网络下使用
+青年大学习获取最新完成页面，并发到指定邮箱。  
+配合自动学习脚本（https://github.com/CNawalol/qndxx-action）实现全程自动工作
+
 ## 🎉️ 使用方法
-
-1.data.json中将下面配置信息填写在对应下方大括号内：
+data.json中将下面配置信息填写在对应下方大括号内：
 ```
 "user": "学号+姓名+",
 "dir": "下载目录",
@@ -18,13 +18,33 @@
 "receiver": "接收邮箱1,接收邮箱2",
 "username": "登录邮箱"
 ```
-2.运行main.py
-### 说明
-QQ邮箱smtp服务器配置：  
+
+### 方法一：👑window程序运行
+
+1.下载exe程序  
+
+2.配置data。json文件，将其放入C:\Windows\System32  
+
+3.运行exe文件  （可以设置定时计划）
+
+
+### 方法二：python运行
+
+1.配置data。json文件  
+
+2.运行main.py  
+
+
+## 🎈注意说明
+
+1.不能在代理网络下使用  
+
+2.QQ邮箱smtp服务器配置：  
 ![img.png](img/img1.png)  
 
 QQ获取邮箱授权码:  
 ![img.png](img/img2.png)  
+
 ## ❤ 感谢  
 [QiYi92](https://github.com/QiYi92/Youth_Learning_Reptile)  
 [zhouyumin](https://github.com/zhouyumin/qndxx)
