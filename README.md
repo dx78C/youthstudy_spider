@@ -47,7 +47,7 @@ data.json中将下面配置信息填写在对应下方大括号内：
 QQ获取邮箱授权码:  
 ![img.png](img/img2.png)  
 
-## ❤ 感谢  
+## ❤ 参考  
 [QiYi92](https://github.com/QiYi92/Youth_Learning_Reptile)  
 [zhouyumin](https://github.com/zhouyumin/qndxx)
 
